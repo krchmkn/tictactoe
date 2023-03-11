@@ -7,8 +7,7 @@
 #define EXIT_KEY 'q'
 #define ASCII_48 '0'
 
-struct Player
-{
+struct Player {
     const int id;
     const char marker;
 };

@@ -31,10 +31,9 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
         if (input_num > 0
                 && input_num - 1 <= game_map_length
                 && game_map[input_num - 1] != player1->marker
-                && game_map[input_num - 1] != player2->marker
-        ) {
-            game_map[input_num - 1] = current_player->marker;
+                && game_map[input_num - 1] != player2->marker) {
 
+            game_map[input_num - 1] = current_player->marker;
             current_player = 
                 current_player->id == 1
                     ? player2
