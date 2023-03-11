@@ -1,11 +1,19 @@
 # Tic Tac Toe
 
 Build an executable:
-`make`
 
-run:
-`make run`
+```sh
+make
+```
+
+Run:
+
+```sh
+make run
+```
 
 Clean all builds:
-`make clean`
 
+```sh
+make clean
+```
