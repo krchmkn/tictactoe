@@ -15,6 +15,7 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
         printf("\n\tTic Tac Toe\n\n"); 
         draw(game_map); 
 
+        // TODO Win situation
         if (steps_left > 0) {
             printf("\033[0;33m"); // Yellow color
             printf("\n\n\tEnter %c to exit.", EXIT_KEY);
