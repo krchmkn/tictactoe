@@ -2,7 +2,6 @@
 #define GAME_H_
 
 #include <stdio.h>
-#include <stdlib.h>
 
 #define SIDE_SIZE 3
 #define EXIT_KEY 'q'

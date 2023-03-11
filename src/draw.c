@@ -8,7 +8,8 @@ void draw(char arr[])
     {
         if (i > 0 && i % SIDE_SIZE == 0)
             printf("\n\n\n");
-
+        
+        printf("\033[1;32m"); // Green color
         printf("\t%c", arr[i]);
     }
 }
