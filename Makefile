@@ -1,7 +1,9 @@
+CFLAGS=-Wall -g
+
 SRC_DIR = src
 
 all:
-	cc $(SRC_DIR)/*.c ${SRC_DIR}/*.h
+	cc -std=c99 $(SRC_DIR)/*.c ${SRC_DIR}/*.h
 
 clean:
 	rm -f ./*.out
