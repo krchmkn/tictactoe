@@ -9,10 +9,6 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
     int steps_left = game_map[game_map_length] - ASCII_48;;
     char input_num, input_ch;
     do {
-        if (input_ch == EXIT_KEY) {
-            exit(0);
-        }
-
         system("clear");
         printf("\n\tTic Tac Toe\n\n"); 
         draw(game_map); 
@@ -21,12 +17,12 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
             printf("\n\n\tEnter %c to exit.", EXIT_KEY);
             printf("\n\tPlayer %d enter a number: ", current_player->id);  
         } else {
-            printf("\n\n\tGame over. Dead heat.\n");
+            printf("\n\n\tGame over. Dead heat.\n\n");
             return;
         }
  
         input_num = input_ch - ASCII_48; // Convert from ASCII
-                                         //
+        
         if (input_num > 0
                 && input_num - 1 <= game_map_length
                 && game_map[input_num - 1] != player1->marker
@@ -41,7 +37,7 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
 
             steps_left--;
         }
-    } while((input_ch = getchar()) != EOF);
+    } while((input_ch = getchar()) != EOF && input_ch != EXIT_KEY);
 
 }
 
