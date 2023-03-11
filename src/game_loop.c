@@ -42,6 +42,5 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
             steps_left--;
         }
     } while((input_ch = getchar()) != EOF && input_ch != EXIT_KEY);
-
 }
 
