@@ -9,19 +9,19 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
     int steps_left = game_map[game_map_length] - ASCII_48;;
     char input_num, input_ch;
     do {
-        printf("\e[1;1H\e[2J"); // Clear screen
-        printf("\033[0;33m"); // Yellow color
+        printf(CLEAR_SCREEN_CODE);
+        printf(YELLOW_SCREEN_CODE);
         
         printf("\n\tTic Tac Toe\n\n"); 
         draw(game_map); 
 
         // TODO Win situation
         if (steps_left > 0) {
-            printf("\033[0;33m"); // Yellow color
+            printf(YELLOW_SCREEN_CODE);
             printf("\n\n\tEnter %c to exit.", EXIT_KEY);
             printf("\n\tPlayer %d enter a number: ", current_player->id);  
         } else {
-            printf("\033[0;33m"); // Yellow color
+            printf(YELLOW_SCREEN_CODE);
             printf("\n\n\tGame over. Dead heat.\n\n");
             return;
         }
@@ -40,7 +40,7 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
                     : player1;
 
             steps_left--;
-        }
+        }       
     } while((input_ch = getchar()) != EOF && input_ch != EXIT_KEY);
 }
 
