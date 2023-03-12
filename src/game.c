@@ -1,12 +1,10 @@
 #include "game.h"
 
+char* itoa(int val, int base);
+
 int main()
 {
-    char game_map[] = {
-        '1', '2', '3',
-        '4', '5', '6',
-        '7', '8', '9'
-    };
+    char game_map[] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
     struct Player player1 = {
         .id = 1, .marker = 'X'
