@@ -1,10 +1,13 @@
 #include "game.h"
 
-void game_loop(char game_map[], struct Player *player1, struct Player *player2)
+void game_loop(char game_map[], 
+        const int winning_combinations_indexes[][SIDE_SIZE], 
+        const struct Player *player1, 
+        const struct Player *player2)
 {
 
     const int game_map_length = SIZE_OF_ARR(game_map);
-    struct Player *current_player = player1;
+    const struct Player *current_player = player1;
     
     int steps_left = atoi(&game_map[game_map_length]);
     char input_num, input_ch;
@@ -18,7 +21,24 @@ void game_loop(char game_map[], struct Player *player1, struct Player *player2)
         
         draw(game_map); 
 
-        // TODO win situation
+        char winner_marker;
+        if (steps_left <= game_map_length - SIDE_SIZE) {
+            winner_marker = get_winner_marker(game_map, 
+                winning_combinations_indexes, 
+                player1->marker, 
+                player2->marker);
+        }
+
+        if (winner_marker == player1->marker) {
+            printf("\n\tThe winner is player %d. Congratulations!\n\n", 
+                    player1->id);
+            return;
+        } else if (winner_marker == player2->marker) {
+            printf("\n\tThe winner is player %d. Congratulations!\n\n", 
+                    player2->id);
+            return;
+        }
+
         if (steps_left > 0) {
             printf(YELLOW_SCREEN_CODE);
             printf("\n\n\tEnter %c to exit.", EXIT_KEY);

@@ -12,13 +12,22 @@
 #define SIZE_OF_ARR(arr) (sizeof(&arr) / sizeof(arr[0]))
 
 struct Player {
-    const int id;
-    const char marker;
+    int id;
+    char marker;
 };
 
 void draw(char[]);
-void game_loop(char[], struct Player *player1, struct Player *player2);
-char get_winner(char[], char, char);
+
+void game_loop(
+        char[], 
+        const int combinations[][SIDE_SIZE], 
+        const struct Player *player1, 
+        const struct Player *player2);
+
+char get_winner_marker(char[], 
+        const int combinations[][SIDE_SIZE], 
+        const char, 
+        const char);
 
 #endif
 
