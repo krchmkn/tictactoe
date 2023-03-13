@@ -18,4 +18,11 @@ Clean all builds:
 make clean
 ```
 
-![screenshot 1](screenshots/1.png)
+Run app in docker container:
+
+```sh
+bash docker.sh
+```
+
+![Game launched](screenshots/1.png)
+![The winner](screenshots/2.png)
