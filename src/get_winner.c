@@ -6,7 +6,6 @@ char get_winner_marker(
         const char player1_marker, 
         const char player2_marker)
 {
-
     const int size = sizeof(&winning_combinations_indexes);
     const int combination_size = (sizeof(winning_combinations_indexes[0]) 
             / sizeof(winning_combinations_indexes[0][0]));
