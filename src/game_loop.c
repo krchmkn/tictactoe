@@ -30,11 +30,11 @@ void game_loop(char game_map[],
         }
 
         if (winner_marker == player1->marker) {
-            printf("\n\tThe winner is player %d. Congratulations!\n\n", 
+            printf("\n\n\tThe winner is player %d.\n\tCongratulations!\n\n", 
                     player1->id);
             return;
         } else if (winner_marker == player2->marker) {
-            printf("\n\tThe winner is player %d. Congratulations!\n\n", 
+            printf("\n\n\tThe winner is player %d.\n\tCongratulations!\n\n", 
                     player2->id);
             return;
         }
