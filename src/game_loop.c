@@ -44,7 +44,7 @@ void game_loop(char game_map[],
             printf("\n\n\tEnter %c to exit.", EXIT_KEY);
             printf("\n\tPlayer %d enter a number: ", current_player->id);  
         } else {
-            printf("\n\n\tGame over.\n\n");
+            printf("\n\n\tGame over. Dead heat.\n\n");
             return;
         }
  
