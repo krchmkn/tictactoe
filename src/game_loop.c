@@ -49,7 +49,6 @@ void game_loop(char game_map[],
         }
  
         input_num = atoi(&input_ch);
-        
         if (input_num > 0
                 && input_num - 1 <= game_map_length
                 && game_map[input_num - 1] != player1->marker
