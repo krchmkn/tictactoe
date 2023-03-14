@@ -1,10 +1,11 @@
 #include "game.h"
 
 char get_winner_marker(
-        char game_map[], 
-        const int winning_combinations_indexes[][SIDE_SIZE],
-        const char player1_marker, 
-        const char player2_marker)
+            const char game_map[], 
+            const int winning_combinations_indexes[][SIDE_SIZE],
+            const char player1_marker, 
+            const char player2_marker
+        )
 {
     const int size = sizeof(&winning_combinations_indexes);
     const int combination_size = (sizeof(winning_combinations_indexes[0]) 

@@ -1,9 +1,11 @@
 #include "game.h"
 
-void game_loop(char game_map[], 
-        const int winning_combinations_indexes[][SIDE_SIZE], 
-        const struct Player *player1, 
-        const struct Player *player2)
+void game_loop(
+            char game_map[], 
+            const int winning_combinations_indexes[][SIDE_SIZE], 
+            const struct Player *player1, 
+            const struct Player *player2
+        )
 {
 
     const int game_map_length = SIZE_OF_ARR(game_map);

@@ -17,18 +17,21 @@ struct Player {
     char marker;
 };
 
-void draw(char[], const char, const char);
+void draw(const char[], const char, const char);
 
 void game_loop(
-        char[], 
-        const int combinations[][SIDE_SIZE], 
-        const struct Player *player1, 
-        const struct Player *player2);
+            char[], 
+            const int combinations[][SIDE_SIZE], 
+            const struct Player *player1, 
+            const struct Player *player2
+        );
 
-char get_winner_marker(char[], 
-        const int combinations[][SIDE_SIZE], 
-        const char, 
-        const char);
+char get_winner_marker(
+            const char[], 
+            const int combinations[][SIDE_SIZE], 
+            const char, 
+            const char
+        );
 
 #endif
 

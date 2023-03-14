@@ -1,7 +1,7 @@
 #include "game.h"
 
-void draw(char arr[], char marker1, char marker2)
-{   
+void draw(const char arr[], const char marker1, const char marker2)
+{  
     const int arr_len = SIZE_OF_ARR(arr); 
     
     for(int i = 0; i <= arr_len; i++) {
