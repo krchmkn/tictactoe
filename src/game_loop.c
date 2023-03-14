@@ -19,7 +19,7 @@ void game_loop(char game_map[],
         printf("\tPlayer 1 - %c\n", player1->marker);
         printf("\tPlayer 2 - %c\n\n", player2->marker);
         
-        draw(game_map); 
+        draw(game_map, player1->marker, player2->marker); 
 
         char winner_marker;
         if (steps_left <= game_map_length - SIDE_SIZE) {
@@ -30,10 +30,12 @@ void game_loop(char game_map[],
         }
 
         if (winner_marker == player1->marker) {
+            printf(YELLOW_SCREEN_CODE);
             printf("\n\n\tThe winner is player %d.\n\tCongratulations!\n\n", 
                     player1->id);
             return;
         } else if (winner_marker == player2->marker) {
+            printf(YELLOW_SCREEN_CODE);
             printf("\n\n\tThe winner is player %d.\n\tCongratulations!\n\n", 
                     player2->id);
             return;
@@ -44,6 +46,7 @@ void game_loop(char game_map[],
             printf("\n\n\tEnter %c to exit.", EXIT_KEY);
             printf("\n\tPlayer %d enter a number: ", current_player->id);  
         } else {
+            printf(YELLOW_SCREEN_CODE);
             printf("\n\n\tGame over. Dead heat.\n\n");
             return;
         }

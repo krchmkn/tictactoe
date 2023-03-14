@@ -2,7 +2,9 @@ CFLAGS=-Wall -g
 
 SRC_DIR = src
 
-all:
+all: build run
+	
+build:
 	cc -std=c99 $(SRC_DIR)/*.c ${SRC_DIR}/*.h
 
 clean:

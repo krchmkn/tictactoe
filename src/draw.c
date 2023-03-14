@@ -1,14 +1,21 @@
 #include "game.h"
 
-void draw(char arr[])
+void draw(char arr[], char marker1, char marker2)
 {   
     const int arr_len = SIZE_OF_ARR(arr); 
     
     for(int i = 0; i <= arr_len; i++) {
         if (i > 0 && i % SIDE_SIZE == 0)
             printf("\n\n\n");
-        
-        printf(GREEN_SCREEN_CODE);
+
+        if (arr[i] == marker1) {
+            printf(GREEN_SCREEN_CODE);
+        } else if (arr[i] == marker2) {
+            printf(YELLOW_SCREEN_CODE);
+        } else {
+            printf(WHITE_SCREEN_CODE);
+        }
+             
         printf("\t%c", arr[i]);
     }
 }
