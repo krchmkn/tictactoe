@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-<img src="screenshots/1.png" width="150px" height="150px" /> <img src="screenshots/2.png" width="150px" height="150px" />
+<img src="screenshots/1.png" width="200px" height="200px" /> <img src="screenshots/2.png" width="200px" height="200px" />
 
 Build an executable:
 
