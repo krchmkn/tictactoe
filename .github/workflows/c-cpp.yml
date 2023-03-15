@@ -16,4 +16,4 @@ jobs:
     - name: make
       run: make
     - name: input
-      run: '5'
+      run: echo "5"
