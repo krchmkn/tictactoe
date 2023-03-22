@@ -1,11 +1,11 @@
-CFLAGS=-Wall -g
+CFLAGS=-Wall -g -std=c99
 
 SRC_DIR = src
 
 all: build run
 	
 build:
-	cc -std=c99 $(SRC_DIR)/*.c ${SRC_DIR}/*.h
+	cc $(CFLAGS) $(SRC_DIR)/*.c ${SRC_DIR}/*.h
 
 clean:
 	rm -f ./*.out
