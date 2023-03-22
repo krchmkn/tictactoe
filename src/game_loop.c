@@ -23,7 +23,7 @@ void game_loop(
         
         draw(game_map, player1->marker, player2->marker); 
 
-        char winner_marker;
+        char winner_marker = '\0';
         if (steps_left <= game_map_length - SIDE_SIZE) {
             winner_marker = get_winner_marker(game_map, 
                 winning_combinations_indexes, 
